@@ -13,10 +13,10 @@ resource "aws_route53_zone" "new" {
 resource "aws_route53_record" "new" {
   count   = "${var.zone_record != "" ? 1 : 0}"
   zone_id = "${var.zone_id}"
-  name    = "${var.zone_name}"
-  type    = "${var.zone_type}"
-  ttl     = "${var.zone_ttl}"
-  record  = "${var.zone_record}"
+  name    = "${var.record_name}"
+  type    = "${var.record_type}"
+  ttl     = "${var.record_ttl}"
+  record  = "${var.record_record}"
   tags = "${merge(
       var.tags
     )}"
