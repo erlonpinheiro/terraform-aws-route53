@@ -14,5 +14,4 @@ resource "aws_route53_record" "new" {
   type    = "${var.record_type}"
   ttl     = "${var.record_ttl}"
   records = ["${var.record_value}"]
-  tags    = "${merge(var.tags)}"
 }
