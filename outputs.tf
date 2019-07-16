@@ -19,3 +19,8 @@ output "name_server_for_delegation4" {
   description = "The fourth nameserver to be configured as subdomain NS record at the domain name."
   value       = "${aws_route53_zone.new.name_servers.3}"
 }
+
+output "dns_record" {
+  description = "DNS entry created."
+  value       = "${aws_route53_record.new.record}"
+}
