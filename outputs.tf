@@ -22,5 +22,5 @@ output "name_server_for_delegation4" {
 
 output "dns_record" {
   description = "DNS entry created."
-  value       = "${aws_route53_record.new.record}"
+  value       = "${aws_route53_record.new.0.records}"
 }
