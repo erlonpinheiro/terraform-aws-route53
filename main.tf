@@ -13,5 +13,5 @@ resource "aws_route53_record" "new" {
   name    = "${var.record_name}"
   type    = "${var.record_type}"
   ttl     = "${var.record_ttl}"
-  records = ["${var.record_value}"]
+  records = "${var.record_value}"
 }
