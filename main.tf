@@ -4,10 +4,7 @@ resource "aws_route53_zone" "new" {
   count   = "${var.public_hosted_zone != "" ? 1 : 0}"
   name    = "${var.public_hosted_zone}"
   comment = "${var.comment}"
-
-  tags = "${merge(
-      var.tags
-    )}"
+  tags    = "${merge(var.tags)}"
 }
 
 resource "aws_route53_record" "new" {
@@ -16,8 +13,6 @@ resource "aws_route53_record" "new" {
   name    = "${var.record_name}"
   type    = "${var.record_type}"
   ttl     = "${var.record_ttl}"
-  record  = "${var.record_value}"
-  tags = "${merge(
-      var.tags
-    )}"
+  records = ["${var.record_value}"]
+  tags    = "${merge(var.tags)}"
 }
