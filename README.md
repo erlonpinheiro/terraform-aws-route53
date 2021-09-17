@@ -35,6 +35,7 @@ module "terraform-aws-route53" {
 | name\_server\_for\_delegation2 | The second nameserver to be configured as subdomain NS record at the domain name. |
 | name\_server\_for\_delegation3 | The third nameserver to be configured as subdomain NS record at the domain name. |
 | name\_server\_for\_delegation4 | The fourth nameserver to be configured as subdomain NS record at the domain name. |
+| zone\_id | Zone ID from the created domain. |
 
 
 ## Authors

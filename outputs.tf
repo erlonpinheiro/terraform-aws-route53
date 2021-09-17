@@ -24,3 +24,8 @@ output "dns_record" {
   description = "DNS entry created."
   value       = "${aws_route53_record.new.0.records}"
 }
+
+output "zone_id" {
+  description = "Zone ID from the created DNS."
+  value       = "${aws_route53_zone.new.zone_id}"
+}
