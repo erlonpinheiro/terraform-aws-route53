@@ -22,10 +22,10 @@ output "name_server_for_delegation4" {
 
 output "dns_record" {
   description = "DNS entry created."
-  value       = "${aws_route53_record.new.0.records}"
+  value       = aws_route53_record.new.0.records
 }
 
 output "zone_id" {
   description = "Zone ID from the created DNS."
-  value       = "${aws_route53_zone.new.0.zone_id}"
+  value       = aws_route53_zone.new.0.zone_id
 }

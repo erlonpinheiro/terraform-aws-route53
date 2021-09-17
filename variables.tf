@@ -36,7 +36,7 @@ variable "record_value" {
 # -------------------------------------------------------------------------------------------------
 variable "tags" {
   description = "The resource tags that should be added to all hosted zone resources."
-  type        = "map"
+  type        = map
   default     = {}
 }
 
