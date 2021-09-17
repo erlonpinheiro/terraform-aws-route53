@@ -22,7 +22,7 @@ output "name_server_for_delegation4" {
 
 output "dns_record" {
   description = "DNS entry created."
-  value       = aws_route53_record.new.0.records
+  value       = element(concat(aws_route53_record.new.*.records, list("")), 0)
 }
 
 output "zone_id" {
