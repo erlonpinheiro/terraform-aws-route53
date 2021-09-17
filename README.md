@@ -40,4 +40,4 @@ module "terraform-aws-route53" {
 
 ## Authors
 
-Module managed by [Erlon Pinheiro](https://github.com/erlonpinheiro).
+Module managed by [Erlon Pinheiro](https://github.com/erlonpinheiro). 
