@@ -27,5 +27,5 @@ output "dns_record" {
 
 output "zone_id" {
   description = "Zone ID from the created DNS."
-  value       = aws_route53_zone.new.0.zone_id
+  value       = length(aws_route53_zone.new) > 0 ? aws_route53_zone.new[0].zone_id : null
 }
